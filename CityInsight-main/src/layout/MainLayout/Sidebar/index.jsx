@@ -31,9 +31,9 @@ function Sidebar() {
 
   const logo = useMemo(
     () => (
-      <Box sx={{ display: 'flex', p: 2 }}>
+      // <Box sx={{ display: 'flex', p: 2, }}>
         <LogoSection />
-      </Box>
+      // </Box>
     ),
     []
   );
