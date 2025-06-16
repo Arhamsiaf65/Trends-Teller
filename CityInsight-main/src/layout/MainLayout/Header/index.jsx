@@ -33,15 +33,15 @@ export default function Header() {
           sx={{
             display: { xs: 'none', md: 'block' },
             flexGrow: 1,
-            height: '40px' // adjust as you like
+            height: '10px' // adjust as you like
           }}
         >
-           <h1
-           style={{ fontWeight: 'bold', fontSize: '28px', textDecoration: 'none' }}>
+           {/* <h1
+           style={{ fontWeight: 'bold', height: '20px',fontSize: '28px', textDecoration: 'none' }}>
             <span style={{ color: '#673ab7' }}>Trends</span>{' '}
             <span style={{ color: '#3255F1' }}>Teller</span>
-          </h1>
-          {/* <LogoSection /> */}
+          </h1> */}
+          <LogoSection />
         </Box>
 
         <Avatar
