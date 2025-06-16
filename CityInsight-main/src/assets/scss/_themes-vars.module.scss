@@ -7,11 +7,17 @@ $paper: #ffffff;
 // $primary200: #90caf9;
 // $primary800: #1565c0;
 
-$primaryLight: #ede7f6;
-$primaryMain: #673ab7;
-$primaryDark: #5e35b1;
-$primary200: #b39ddb;
-$primary800: #4527a0;
+$primaryLight: #fff3b0;   // lighter version of #FDC700
+$primaryMain: #FDC700;    // your main yellow color
+$primaryDark: #e6b800;    // darker version of #FDC700
+$primary200: #ffe066;     // mid-light yellow shade
+$primary800: #ccaa00;     // mid-dark yellow shade
+
+$secondaryLight: #4d4d4d; // lighter version of #212121
+$secondaryMain: #212121;  // your main dark color
+$secondaryDark: #1a1a1a;  // even darker version
+$secondary200: #3d3d3d;   // mid-light gray
+$secondary800: #121212;   // very dark version
 
 
 // // secondary
@@ -21,11 +27,7 @@ $primary800: #4527a0;
 // $secondary200: #b39ddb;
 // $secondary800: #4527a0;
 
-$secondaryLight: #e0e6fb; // lighter version of #3255F1
-$secondaryMain: #3255F1; // your main color
-$secondaryDark: #2d4cda; // darker version
-$secondary200: #a6bafc; // lighter shade
-$secondary800: #223c9b; // darker shade
+
 
 
 
