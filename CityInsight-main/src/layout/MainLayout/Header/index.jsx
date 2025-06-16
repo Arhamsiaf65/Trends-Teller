@@ -36,7 +36,12 @@ export default function Header() {
             height: '40px' // adjust as you like
           }}
         >
-          <LogoSection />
+           <h1
+           style={{ fontWeight: 'bold', fontSize: '28px', textDecoration: 'none' }}>
+            <span style={{ color: '#673ab7' }}>Trends</span>{' '}
+            <span style={{ color: '#3255F1' }}>Teller</span>
+          </h1>
+          {/* <LogoSection /> */}
         </Box>
 
         <Avatar

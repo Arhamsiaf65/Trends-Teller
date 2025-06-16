@@ -12,7 +12,8 @@ import Logo from 'ui-component/Logo';
 export default function LogoSection() {
   return (
     <Link component={RouterLink} to={'/admin/dashboard'} aria-label="theme-logo">
-      <Logo />
+      {/* <Logo /> */}
+     
     </Link>
   );
 }

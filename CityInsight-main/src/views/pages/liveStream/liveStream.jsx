@@ -232,7 +232,7 @@ const LiveStream = () => {
 
             const data = await response.json();
             if (!response.ok) {
-                throw new Error(data.message || "Error fetching permission");
+                throw new Error(data.message || "Error fetching stream");
             }
             setAllPermission(data || []);
         }
@@ -290,7 +290,7 @@ const LiveStream = () => {
                 </Box>
             ) : allPermission.length === 0 ? (
                 <Box display="flex" justifyContent="center" my={4}>
-                    <p>No Permission found</p>
+                    <p>No stream found</p>
                 </Box>
             ) : (
                 <TableContainer component={Paper}>
@@ -400,20 +400,7 @@ const LiveStream = () => {
 
                                     <TableCell sx={{ pr: 12 }} align="right">
                                         <Box sx={{ display: 'flex', gap: 1 }}>
-                                            <Button
-                                                disabled={adminRole?.toLowerCase() !== "admin"}
-                                                onClick={() => handleEdit(admin)}
-                                                variant="outlined"
-                                                color="primary"
-                                                size="small"
-                                                sx={{
-                                                    border: "2px solid",
-                                                    borderRadius: '8px',
-                                                    minWidth: '70px'
-                                                }}
-                                            >
-                                                Edit
-                                            </Button>
+                                            
 
                                             <Button
 
@@ -544,95 +531,7 @@ const LiveStream = () => {
 
 
 
-            {/* Edit  Modal */}
-            <Dialog
-                open={openEditModal}
-                onClose={() => handleUpdate(false)}
-                maxWidth="sm"
-                fullWidth
-                sx={{ "& .MuiDialog-paper": { width: "500px", minHeight: "250px" } }}
-            >
-                <DialogTitle sx={{ textAlign: 'center', fontWeight: 600 }}>Edit Role</DialogTitle>
-
-                <DialogContent
-                    sx={{
-                        minHeight: "150px",
-                        display: "flex",
-                        flexDirection: "column",
-                        justifyContent: "center",
-                        gap: 2,
-                    }}
-                >
-                    {/* Title Field */}
-                    <TextField
-                        label="Title"
-                        value={editStream?.title || ""}
-                        fullWidth
-                        onChange={(e) => setEditStream({ ...editStream, title: e.target.value })}
-                    />
-
-                    {/* Embed URL Field */}
-                    <TextField
-                        label="Embed URL"
-                        value={editStream?.embedUrl || ""}
-                        fullWidth
-                        onChange={(e) => setEditStream({ ...editStream, embedUrl: e.target.value })}
-                    />
-
-                    {/* Start Time */}
-                    <TextField
-                        label="Start Time"
-                        type="datetime-local"
-                        fullWidth
-                        InputLabelProps={{ shrink: true }}
-                        value={editStream?.startTime ? toDatetimeLocal(editStream.startTime) : ''}
-                        onChange={(e) => setEditStream({ ...editStream, startTime: e.target.value })}
-                    />
-
-                    {/* End Time */}
-                    <TextField
-                        label="End Time"
-                        type="datetime-local"
-                        fullWidth
-                        InputLabelProps={{ shrink: true }}
-                        value={editStream?.endTime ? toDatetimeLocal(editStream.endTime) : ''}
-                        onChange={(e) => setEditStream({ ...editStream, endTime: e.target.value })}
-                    />
-
-                    {/* Is Live Toggle */}
-                    <FormControlLabel
-                        control={
-                            <Switch
-                                checked={editStream?.isLive || false}
-                                onChange={(e) => setEditStream({ ...editStream, isLive: e.target.checked })}
-                                color="primary"
-                            />
-                        }
-                        label="Is Live"
-                    />
-
-                    {/* Description */}
-                    <TextField
-                        label="Description"
-                        multiline
-                        rows={3}
-                        fullWidth
-                        value={editStream?.description || ""}
-                        onChange={(e) => setEditStream({ ...editStream, description: e.target.value })}
-                    />
-                </DialogContent>
-
-
-                <DialogActions>
-                    <Button onClick={() => setOpenEditModal(false)} sx={{ color: "red" }}>
-                        Cancel
-                    </Button>
-                    <Button onClick={handleUpdate} color="primary">
-                        {Newloading ? <CircularProgress size={24} color="inherit" /> : 'Update'}
-
-                    </Button>
-                </DialogActions>
-            </Dialog>
+         
 
 
 
