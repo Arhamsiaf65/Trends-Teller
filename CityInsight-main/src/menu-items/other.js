@@ -7,26 +7,19 @@ const icons = { IconBrandChrome, IconHelp };
 // ==============================|| SAMPLE PAGE & DOCUMENTATION MENU ITEMS ||============================== //
 
 const other = {
-  id: 'sample-docs-roadmap',
+  id: 'live-stream',
   type: 'group',
+  title:'Live Stream',
   children: [
     {
-      id: 'sample-page',
-      title: 'Sample Page',
+      id: 'live-stream',
+      title: 'Live Stream',
       type: 'item',
-      url: '/sample-page',
+      url: '/admin/live-stream',
       icon: icons.IconBrandChrome,
       breadcrumbs: false
     },
-    {
-      id: 'documentation',
-      title: 'Documentation',
-      type: 'item',
-      url: 'https://codedthemes.gitbook.io/berry/',
-      icon: icons.IconHelp,
-      external: true,
-      target: true
-    }
+    
   ]
 };
 

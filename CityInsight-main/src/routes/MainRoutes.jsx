@@ -24,6 +24,7 @@ const Addads = Loadable(lazy(() => import('views/pages/ads/createAds')));
 const AdCatalog = Loadable(lazy(() => import('views/pages/ads/adCatalog')));
 const EditAds = Loadable(lazy(() => import('views/pages/ads/editAds')));
 const RoleRequests = Loadable(lazy(() => import('views/pages/user/roleRequest')));
+const LiveStream = Loadable(lazy(() => import('views/pages/liveStream/liveStream')));
 // ==============================|| MAIN ROUTING ||============================== //
 
 
@@ -112,6 +113,10 @@ const MainRoutes = {
             {
               path: 'role-requests',
               element: <RoleRequests />
+            },
+            {
+              path: 'live-stream',
+              element: <LiveStream/>
             },
 
           ]
